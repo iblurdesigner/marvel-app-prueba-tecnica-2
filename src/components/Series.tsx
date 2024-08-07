@@ -4,18 +4,19 @@ import Button from "./Button"
 const Series = ({query}) => {
   return (
     <>
-      <ul className='card'>
+      <ul className="series">
         {query.data.data.results.map((serie) => (
-          <div key={serie.id}>
+          <div key={serie.id} className="card">
             <h2>{serie.title}</h2>
             <img src={serie.thumbnail.path + '.' + serie.thumbnail.extension} width={100} height={180} alt={serie.title} />
             <p>{serie.type}</p>
+
+            <Link to={'/details'}>
+              <Button onClick={ () => {}} children={'ver detalle'} />
+            </Link>
           </div>
         ))}
       </ul>
-      <Link to={'/details'}>
-        <Button children={'ver detalle'} />
-      </Link>
     </>
   )
 }

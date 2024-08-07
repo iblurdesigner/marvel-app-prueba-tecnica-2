@@ -33,8 +33,24 @@
   }
 }
 
-.card {
+.series {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: solid 1px rgb(217, 236, 6);
   padding: 2em;
+  margin: 16px;
+  gap: 10px;
+  width: 1200px;
+
+}
+
+.card{
+  background: rgb(50, 50, 50);
+  height: auto;
+  border: solid 1px red;
+  width: 350px;
+  height: 420px;
 }
 
 .read-the-docs {
