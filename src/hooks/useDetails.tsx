@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 
 import { apiDetails } from "../service/apiDetails"
-import Details from "../pages/Detail/Details"
 import { useParams } from "react-router-dom"
 
 
@@ -17,8 +16,5 @@ export function useDetails () {
   )
 
 
-  if(queryDetail.isLoading) return <h1>Loading...</h1>
-  if(queryDetail.isError) return <h1>Error</h1>
-
-  return <Details  />
+  return {queryDetail}
 }

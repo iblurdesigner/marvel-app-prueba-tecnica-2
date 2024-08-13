@@ -1,4 +1,3 @@
-
 import { Link, useParams } from 'react-router-dom'
 import Button from '../../components/Button'
 import { useQuery } from '@tanstack/react-query'
@@ -21,7 +20,7 @@ export function useDetails () {
 
 const Details = () => {
 
-  const {queryDetail} = useDetails()
+  const queryDetail = useDetails()
 
   return (
     <>
@@ -29,7 +28,7 @@ const Details = () => {
 
       <div>
         {
-          queryDetail?.data.data.results.map( serie => (
+          queryDetail.queryDetail.data?.data.results.map( serie => (
             <div key={serie.id}>
               <h1>{serie.title}</h1>
               <img src={serie.thumbnail.path + '.' + serie.thumbnail.extension} alt={serie.title} />
